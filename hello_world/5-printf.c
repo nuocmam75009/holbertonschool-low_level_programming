@@ -1,4 +1,6 @@
-/* include stdio h library to use print*/
+/* 
+ * include stdio h library to use print
+ */
 #include <stdio.h>
 int main(void)
 {
