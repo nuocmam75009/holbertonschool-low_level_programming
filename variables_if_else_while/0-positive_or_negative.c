@@ -1,4 +1,5 @@
 #include <time.h>
+#include <stdlib.h>
 #include <stdio.h>
 /**
  * main - Entry point
@@ -25,4 +26,4 @@ int main(void)
 		printf("%d is zero \n", n);
 	}
 	return (0);
-}}
+}
