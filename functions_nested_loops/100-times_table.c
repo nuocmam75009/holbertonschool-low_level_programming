@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_times_table - prints the n times table
- * @n: int being checked 
+ * @n: int being checked
  * a - number
  * b - number for multiplication
  */
