@@ -1,7 +1,8 @@
 #include "main.h"
 /**
  * mul - multiplies
- * @a @b: being multiplied
+ * @a: int beiing multiplied
+ * @b: int being multiplied
  *
  * Return: result of operation
  */
