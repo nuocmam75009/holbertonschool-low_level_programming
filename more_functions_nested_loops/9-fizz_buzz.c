@@ -7,7 +7,7 @@
  *
  * Return: Always 0
  */
-int main()
+int main(void)
 {
 	int number;
 
@@ -22,9 +22,8 @@ int main()
 		else if ((number % 5) == 0)
 			printf("Buzz ");
 
-		else 
+		else
 			printf("%d ", number);
 	}
-	printf("\n");
 	return (0);
 }
