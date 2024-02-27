@@ -24,6 +24,10 @@ int main(void)
 
 		else
 			printf("%d ", number);
+		
+		if (number == 100)
+			printf("Buzz");
 	}
+	printf("\n");
 	return (0);
 }
