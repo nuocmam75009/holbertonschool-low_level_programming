@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * reset_to_98 - points to an int
- * @n: int being checked
+ * @n: int being verified
  */
 void reset_to_98(int *n)
 {
