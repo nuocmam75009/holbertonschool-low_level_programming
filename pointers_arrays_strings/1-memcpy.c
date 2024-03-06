@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * memcpy - copies n bytes from memory area src to memory area dest
+ * _memcpy - copies n bytes from memory area src to memory area dest
  * @n: bytes copied from memory area
  * @src: source
  * @dest: destination memory area
@@ -11,13 +11,11 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int  index;
 	char *destination = dest;
-	char *source = src;
+	const char *source = src;
 
 	for (index = 0; index < n; index++)
-	{
 		destination[index] = source[index];
-	}
-	
+
 	return (dest);
 }
 
