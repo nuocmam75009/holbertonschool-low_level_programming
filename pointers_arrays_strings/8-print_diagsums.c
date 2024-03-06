@@ -1,5 +1,10 @@
 #include "main.h"
 #include <stdio.h>
+/**
+ * print_diagsums - prints the sum of diagonals
+ * @a: int being multiplied
+ * @size: size
+ */
 void print_diagsums(int *a, int size)
 {
 	int index, sum1 = 0, sum2 = 0;
