@@ -1,11 +1,13 @@
 #include <stdio.h>
+
 /**
- * main - prints program name
- * @argc: number of arg
- * @argv: array of pointers to args
+ * main - print is name followed by a new line
+ * @argc: argument count
+ * @argv: array of arguments
  *
  * Return: 0
  */
+
 int main(int argc, char *argv[])
 {
 	(void)argc;
