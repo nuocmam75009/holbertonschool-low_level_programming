@@ -1,47 +1,35 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+
 /**
- * alloc_grid - returns pointer to a 2 dimensional array of ints
- * @width: width of array
- * @height: height of array
+ * alloc_grid - function that returns a pointer to a 2d array of int
+ * @width: The width of the 2-dimensional array.
+ * @height: The height of the 2-dimensional array.
  *
- * Return: NULL if failure
- * or pointer to the array
+ * Return: If width <= 0, height <= 0, or the function fails - NULL.
+ *         Otherwise - a pointer to the 2-dimensional array of integers.
  */
+
 int **alloc_grid(int width, int height)
 {
-	int **pyeol;
-	int height_idx;
-	int width_idx;
+	int **array;
+	int i;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	pyeol = malloc(sizeof(int) * height);
+	array = malloc(width * sizeof(int *));
 
-	if (pyeol == NULL)
+	if (array == NULL)
 		return (NULL);
 
-	for (height_idx = 0; height_idx < height; height_idx++)
+	for (i = 0; i < width; i++)
 	{
-		pyeol[height_idx] = malloc(sizeof(int) * width);
-
-		if (pyeol[height_idx] == NULL)
-		{
-			for (; height_idx >= 0; height_idx--)
-				free(pyeol[height_idx]);
-
-			free(pyeol);
+		array[i] = malloc(height * sizeof(int));
+		if (array[i] == NULL)
 			return (NULL);
-		}
 	}
-
-	for (height_idx = 0; height_idx < height; height_idx++)
-	{
-		for (width_idx = 0; width_idx < width; width_idx++)
-			pyeol[height_idx][width_idx] = 0;
-	}
-
-	return (pyeol);
+	return (array);
+	free(array);
 }
