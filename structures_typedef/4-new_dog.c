@@ -1,5 +1,6 @@
-#include "dog.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include "dog.h"
 
 int _strlen(char *str);
 char *_strcopy(char *dest, char *src);
@@ -51,33 +52,33 @@ char *_strcopy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doggo;
+	dog_t *dog2;
 
 	if (name == NULL || age < 0 || owner == NULL)
 		return (NULL);
 
-	doggo = malloc(sizeof(dog_t));
-	if (doggo == NULL)
+	dog2 = malloc(sizeof(dog_t));
+	if (dog2 == NULL)
 		return (NULL);
 
-	doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (doggo->name == NULL)
+	dog2->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (dog2->name == NULL)
 	{
-		free(doggo);
+		free(dog2);
 		return (NULL);
 	}
 
-	doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (doggo->owner == NULL)
+	dog2->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (dog2->owner == NULL)
 	{
-		free(doggo->name);
-		free(doggo);
+		free(dog2->name);
+		free(dog2);
 		return (NULL);
 	}
 
-	doggo->name = _strcopy(doggo->name, name);
-	doggo->age = age;
-	doggo->owner = _strcopy(doggo->owner, owner);
+	dog2->name = _strcopy(dog2->name, name);
+	dog2->age = age;
+	dog2->owner = _strcopy(dog2->owner, owner);
 
-	return (doggo);
+	return (dog2);
 }
